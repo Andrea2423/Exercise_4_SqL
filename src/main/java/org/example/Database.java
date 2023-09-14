@@ -9,9 +9,7 @@ import java.sql.*;
 public class Database {
 
     public static void main(String[] args) {
-        //DriverManager.getConnection(
-        //                    "jdbc:mysql://localhost:3306/Develhope",
-        //                    "root", ",$rZ8JgBeUbR#cw");
+
         try {
             Connection connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/Develhope",
