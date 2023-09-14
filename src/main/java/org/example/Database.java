@@ -9,7 +9,9 @@ import java.sql.*;
 public class Database {
 
     public static void main(String[] args) {
-
+        //DriverManager.getConnection(
+        //                    "jdbc:mysql://localhost:3306/Develhope",
+        //                    "root", ",$rZ8JgBeUbR#cw");
         try {
             Connection connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/Develhope",
@@ -25,9 +27,10 @@ public class Database {
             statementGermany.execute(
                     "UPDATE students SET country= \"Germany\" WHERE student_id<=4 AND student_id>2");
             connection.close();
+            System.out.println("Colonna creata con successo!");
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("Colonna creata con successo!");
     }
 }
